@@ -19,7 +19,9 @@
 </head>
 
 <body>
-    @include('_components.navbar')
+    @if(!Route::is('login') )
+        @include('_components.navbar')
+    @endif
     @yield('content')
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
